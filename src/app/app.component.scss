@@ -103,3 +103,33 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+  :host>section{ 
+        header .box{
+            padding: 0;
+            background: none;
+            font-size: .6em;
+            gap: 10px;
+
+            &>div{
+                border: none;
+                background-color: var(--surface);
+                padding: 10px 10px 20px 20px;
+                flex: 1 0 0;
+                text-align: center;
+                border-radius: 10px;
+                margin: 0;
+                
+                &:not(:last-child), &:not(:first-child){
+                    border-right: none;
+                    padding-right: 10px;
+                }
+            }
+        }
+        main .box{
+            font-size: .8em;
+            padding: 10px;
+        }
+    }
+}
