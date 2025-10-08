@@ -1,0 +1,105 @@
+.box{
+    padding: 20px;
+    border-radius: 15px;
+    background-color: var(--surface);
+}
+:host>section{
+    padding: 10px;
+    &>header{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        img{
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .box{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+            &>div{
+                line-height: 1.5em;
+                &>label{
+                    display: table;
+                    text-transform: uppercase;
+                }
+                &>span{
+                    display: table;
+                    font-weight: 900;
+                    font-size: 2.2em;
+                    letter-spacing: -0.075em
+                }
+                &:not(:last-child){
+                    border-right: solid var(--muted);
+                    padding-right: 20px;
+                }
+                &:not(:first-child){
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+
+    &>main{
+        border-top: solid 1px;
+        padding: 20px;
+        gap: 20px;
+        margin-top: 20px;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        .box{
+            flex: 1 0 0;
+            padding: 10px 40px 10px 20px;
+            header{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                &>span{
+                    background-color: var(--muted);
+                    color: var(--surface);
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 5px 12px 5px 5px;
+                    border-radius: 20px;
+                    opacity: 0.4;
+
+                    &>i{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        width: 25px;
+                        height: 25px;
+                        border: solid 2px var(--surface);
+                    }
+                }
+            }
+            &>span{
+                display: table;
+                font-weight: 900;
+                font-size: 2.2em;
+                letter-spacing: -0.075em;
+                opacity: 0.3;
+            }
+
+            &.pago{
+                header>span{
+                    background-color: #ff9100;
+                    opacity: 1;
+                }
+                *{opacity: 1;}
+            }
+        }
+    }
+}

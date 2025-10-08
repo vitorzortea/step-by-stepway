@@ -1,1 +1,108 @@
-/* You can add global styles to this file, and also import other style files */
+/* Reboot mínimo + tokens de cor do layout  */
+
+/* Inter do Google (swap p/ evitar FOIT) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/* ===== Tokens de cor (extraídos do layout) ===== */
+:root {
+  --bg:        #F1F2F4; /* cinza claro do fundo */
+  --surface:   #FFFFFF; /* cartões / caixas */
+  --fg:        #050506; /* texto principal */
+  --muted:     #4A4D4D; /* texto secundário */
+  --border:    #BDBFC4; /* linhas/bordas suaves */
+  --primary:   #868E9F; /* azul-acinzentado (chips/números) */
+  --success:   #0D5A38; /* verde dos pagos */
+  --radius:    .75rem;
+}
+
+/* ===== Reset básico e base tipográfica ===== */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  line-height: 1.5;
+  background: var(--bg);
+  color: var(--fg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove estilos nativos ruidosos */
+h1,h2,h3,h4,h5,h6,p,figure,blockquote,dl,dd { margin: 0; }
+ul[role='list'], ol[role='list'] { list-style: none; padding: 0; margin: 0; }
+img, picture, video, canvas, svg { display: block; max-width: 100%; }
+input, button, textarea, select { font: inherit; color: inherit; }
+button { background: none; border: 0; padding: 0; cursor: pointer; }
+
+/* ===== Elementos comuns com as cores do layout ===== */
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 1rem 0;
+}
+
+.card, .surface {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* Campos e botões minimalistas nas cores do layout */
+.input, input[type="text"], input[type="number"], input[type="date"],
+select, textarea {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: .5rem;
+  padding: .625rem .75rem;
+  outline: none;
+}
+.input:focus, input:focus, select:focus, textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 .2rem color-mix(in srgb, var(--primary) 30%, transparent);
+}
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: .5rem;
+  border-radius: .5rem;
+  padding: .625rem .9rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  border-color: color-mix(in srgb, var(--primary) 80%, #000 0%);
+}
+.btn-success {
+  background: var(--success);
+  color: #fff;
+  border-color: color-mix(in srgb, var(--success) 80%, #000 0%);
+}
+
+/* Estados e acessibilidade */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: calc(var(--radius) / 2);
+}
+
+[aria-current="page"], .is-active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Reduz animações se o usuário preferir */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
