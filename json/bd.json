@@ -3,7 +3,7 @@
     "entrada":28000,
     "parcelas": [
         { "data": "08/25", "valor": 1000, "pago":true },
-        { "data": "09/25", "valor": 1000, "pago":false },
+        { "data": "09/25", "valor": 1000, "pago":true },
         { "data": "10/25", "valor": 1000, "pago":false },
         { "data": "11/25", "valor": 1000, "pago":false },
         { "data": "12/25", "valor": 1000, "pago":false },
