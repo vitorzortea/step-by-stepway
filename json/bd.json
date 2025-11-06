@@ -2,9 +2,7 @@
     "total":65000,
     "entrada":28000,
     "parcelas": [
-        { "data": "08/25", "valor": 1000, "pago":true },
-        { "data": "09/25", "valor": 1000, "pago":false },
-        { "data": "10/25", "valor": 1000, "pago":false },
+        { "data": "10/25", "valor": 1000, "pago":true },
         { "data": "11/25", "valor": 1000, "pago":false },
         { "data": "12/25", "valor": 1000, "pago":false },
         { "data": "01/26", "valor": 1000, "pago":false },
@@ -38,6 +36,8 @@
         { "data": "05/28", "valor": 1000, "pago":false },
         { "data": "06/28", "valor": 1000, "pago":false },
         { "data": "07/28", "valor": 1000, "pago":false },
-        { "data": "08/28", "valor": 1000, "pago":false }
+        { "data": "08/28", "valor": 1000, "pago":false },
+        { "data": "09/28", "valor": 1000, "pago":false },
+        { "data": "10/28", "valor": 1000, "pago":false }
     ]
 }
